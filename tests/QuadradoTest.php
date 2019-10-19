@@ -3,11 +3,23 @@
 use App\Quadrado;
 
 class QuadradoTest extends PHPUnit\Framework\TestCase{
-    public function testIFTrue()
+    /**
+     * @dataProvider collectionAreas
+     */
+    public function testArea(int $lado1, int $lado2, int $expectedArea)
     {
-        $quadrado = new Quadrado(3, 2);
+        $quadrado = new Quadrado($lado1, $lado2);
         $area = $quadrado->getArea();
-        $this->assertEquals(6.0, $area);
+        $this->assertEquals($expectedArea, $area);
+    }
+
+    public function collectionAreas()
+    {
+        return [
+            [ 3, 2, 6 ],
+            [ 4, 5, 20 ],
+            [ 3, 4, 12 ]
+        ];
     }
 }
 
