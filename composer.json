@@ -9,6 +9,7 @@
         }
     },
     "scripts": {
-        "test": "./vendor/bin/phpunit tests --colors=always"
+        "test": "./vendor/bin/phpunit tests --colors=always",
+        "son": "./vendor/bin/phpunit tests --colors=always --bootstrap=tests/bootstrap.php"
     }
 }
