@@ -9,7 +9,7 @@
         }
     },
     "scripts": {
-        "test": "php -r \"system(join(DIRECTORY_SEPARATOR, array('vendor', 'bin', 'phpunit')) . ' --color=always');\"",
+        "test": "php composer-test.php --",
         "son": "./vendor/bin/phpunit tests --colors=always --bootstrap=tests/bootstrap.php"
     }
 }
